@@ -40,15 +40,15 @@ class ToDoList:
                 print("What would you like to edit?")
                 print("1. Task ID")
                 print("2. Task Description")
-            choice = input("Enter your choice (1 or 2): ")
+            choice = input("Enter your choice (1 or 2) ")
             if choice == "1":
-                new_id = input('Enter a new task ID: ')
+                new_id = input('Enter a new task ID ')
                 task.id = new_id
-                print(f"Task ID successfully changed to {new_id}.")
+                print(f"Task ID successfully changed to {new_id}")
             elif choice == "2":
-                new_description = input('Enter a new task description: ')
+                new_description = input('Enter a new task description ')
                 task.description = new_description
-                print(f"Task description successfully updated to: {new_description}.")
+                print(f"Task description successfully updated to {new_description}")
             else:
                 print("Invalid choice.")
             return

@@ -7,7 +7,7 @@ def run_taskmanager():
     print("\n2. View a task")
     print("\n3. View all tasks")
     print("\n4. Mark task as completed/incomplete")
-    print("\n5. Edit a task description")
+    print("\n5. Edit a task description or ID")
     print("\n6. Quit")
     my_list = ToDoList()
     while True: 
@@ -28,7 +28,7 @@ def run_taskmanager():
             id = input('Enter a task ID to edit: ')
             my_list.edit_task(id)
         elif selection == '6':
-            print("Exiting task manager.")
+            print("Exiting task manager")
             break 
         else: 
             print('Invalid selection. Please enter a menue selection between 1 and 6')

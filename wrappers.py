@@ -20,8 +20,10 @@ class ToDoList:
         print(f"Task: {id} added witha description of {description}")
     
     def view_tasks(self):
-            for task in self.tasks:
-                print(task)
+        for task in self.tasks:
+            print(task.task_data())
+        else: 
+            print('No tasks found')
 
     def complete_uncomplete(self, id):
         for task in self.tasks:
@@ -35,12 +37,22 @@ class ToDoList:
     def edit_task(self, id):
         for task in self.tasks:
             if task.id == id:
-                print(task)
-        new_id = input('Enter a new task ID')
-        for task in self.tasks:
-            if new_id != task.id:
+                print("What would you like to edit?")
+                print("1. Task ID")
+                print("2. Task Description")
+            choice = input("Enter your choice (1 or 2): ")
+            if choice == "1":
+                new_id = input('Enter a new task ID: ')
                 task.id = new_id
-            print(f"Task ID successfully changed to {new_id} ")
+                print(f"Task ID successfully changed to {new_id}.")
+            elif choice == "2":
+                new_description = input('Enter a new task description: ')
+                task.description = new_description
+                print(f"Task description successfully updated to: {new_description}.")
+            else:
+                print("Invalid choice.")
+            return
+    print("Task not found.")
             
     def view_task_details(self, id):
         for task in self.tasks:
